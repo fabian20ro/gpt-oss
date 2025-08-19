@@ -45,6 +45,8 @@ if __name__ == "__main__":
         from .inference.metal import setup_model
     elif args.inference_backend == "ollama":
         from .inference.ollama import setup_model
+    elif args.inference_backend == "llama-server":
+        from .inference.llama_server import setup_model
     elif args.inference_backend == "vllm":
         from .inference.vllm import setup_model
     elif args.inference_backend == "transformers":
