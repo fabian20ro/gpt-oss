@@ -306,6 +306,7 @@ You can start this server with the following inference backends:
 - `triton` — uses the triton implementation
 - `metal` — uses the metal implementation on Apple Silicon only
 - `ollama` — uses the Ollama /api/generate API as an inference solution
+- `llama-server` — uses a local llama.cpp server for inference
 - `vllm` — uses your installed vllm version to perform inference
 - `transformers` — uses your installed transformers version to perform local inference
 
@@ -338,7 +339,7 @@ model = "gpt-oss:20b"
 model_provider = "local"
 ```
 
-This will work with any chat completions-API compatible server listening on port 11434, like ollama. Start the server and point codex to the oss model:
+This will work with any chat completions-API compatible server, like ollama or llama-server. Start the server and point codex to the oss model:
 
 ```
 ollama run gpt-oss:20b
